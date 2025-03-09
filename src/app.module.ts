@@ -1,10 +1,10 @@
-import { Module } from "@nestjs/common"
-import { ConfigModule } from "@nestjs/config"
-import { ScheduleModule } from "@nestjs/schedule"
-import { ContactsModule } from "./contacts/contacts.module"
-import { MessagesModule } from "./messages/messages.module"
-import { SupabaseModule } from "./supabase/supabase.module"
-import { TasksModule } from "./tasks/tasks.module"
+import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
+import { ScheduleModule } from '@nestjs/schedule';
+import { ContactsModule } from './contacts/contacts.module';
+import { MessagesModule } from './messages/messages.module';
+import { SupabaseModule } from './supabase/supabase.module';
+import { TasksModule } from './tasks/tasks.module';
 
 @Module({
   imports: [
@@ -19,4 +19,3 @@ import { TasksModule } from "./tasks/tasks.module"
   ],
 })
 export class AppModule {}
-

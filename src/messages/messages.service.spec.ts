@@ -1,6 +1,6 @@
-import { Test, TestingModule } from "@nestjs/testing";
-import { MessagesService } from "./messages.service";
-import { SupabaseService } from "../supabase/supabase.service";
+import { Test, TestingModule } from '@nestjs/testing';
+import { MessagesService } from './messages.service';
+import { SupabaseService } from '../supabase/supabase.service';
 
 const mockSupabaseService = {
   client: {
@@ -15,7 +15,7 @@ const mockSupabaseService = {
   },
 };
 
-describe("MessagesService", () => {
+describe('MessagesService', () => {
   let service: MessagesService;
 
   beforeEach(async () => {
@@ -32,7 +32,7 @@ describe("MessagesService", () => {
     service = module.get<MessagesService>(MessagesService);
   });
 
-  it("should be defined", () => {
+  it('should be defined', () => {
     expect(service).toBeDefined();
   });
 });
