@@ -1,10 +1,10 @@
-import { Injectable, NotFoundException } from "@nestjs/common"
-import type { SupabaseService } from "../supabase/supabase.service"
-import type { Contact } from "./interfaces/contact.interface"
+import { Injectable, NotFoundException } from "@nestjs/common";
+import { SupabaseService } from "../supabase/supabase.service";
+import type { Contact } from "./interfaces/contact.interface";
 
 @Injectable()
 export class ContactsService {
-  constructor(private supabaseService: SupabaseService) {}
+  constructor(private readonly supabaseService: SupabaseService) {}
 
   async findAll(userId: string): Promise<Contact[]> {
     // Get all conversations where the user is a participant

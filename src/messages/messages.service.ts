@@ -1,11 +1,11 @@
-import { Injectable, NotFoundException } from "@nestjs/common"
-import type { SupabaseService } from "../supabase/supabase.service"
-import type { Message } from "./interfaces/message.interface"
-import type { CreateMessageDto } from "./dto/create-message.dto"
+import { Injectable, NotFoundException } from "@nestjs/common";
+import { SupabaseService } from "../supabase/supabase.service"; // 🔹 Importación corregida
+import type { Message } from "./interfaces/message.interface";
+import type { CreateMessageDto } from "./dto/create-message.dto";
 
 @Injectable()
 export class MessagesService {
-  constructor(private supabaseService: SupabaseService) {}
+  constructor(private readonly supabaseService: SupabaseService) {}
 
   async findAll(conversationId: string, page = 1, limit = 50): Promise<Message[]> {
     // Calculate offset based on page and limit
