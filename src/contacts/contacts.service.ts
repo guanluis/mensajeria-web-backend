@@ -146,7 +146,7 @@ export class ContactsService {
       status: userData.status || 'Offline',
       lastMessage: lastMessage?.content,
       lastMessageTime: lastMessage?.created_at,
-      unreadCount: 0, // This would need additional logic to calculate
+      unreadCount: 0, 
     };
   }
 }

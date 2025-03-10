@@ -1,12 +1,12 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { Cron, CronExpression } from '@nestjs/schedule';
-import type { SupabaseService } from '../supabase/supabase.service';
+import { SupabaseService } from '../supabase/supabase.service';
 
 @Injectable()
 export class TasksService {
-  private readonly logger = new Logger(TasksService.name);
+  private readonly logger = new Logger(TasksService.name); // 🔹 Agregar Logger
 
-  constructor(private supabaseService: SupabaseService) {}
+  constructor(private readonly supabaseService: SupabaseService) {}
 
   // Run every 5 minutes to keep the service alive on Render
   @Cron(CronExpression.EVERY_5_MINUTES)

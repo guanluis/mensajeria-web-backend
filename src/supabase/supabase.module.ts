@@ -5,7 +5,7 @@ import { SupabaseService } from './supabase.service';
 @Global()
 @Module({
   imports: [ConfigModule],
-  providers: [SupabaseService],
+  providers: [SupabaseService], 
   exports: [SupabaseService],
 })
 export class SupabaseModule {}

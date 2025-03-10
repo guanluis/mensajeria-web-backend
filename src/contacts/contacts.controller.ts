@@ -1,7 +1,7 @@
 import { Controller, Get, Param, Query, UseGuards } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse, ApiQuery } from '@nestjs/swagger';
-import type { ContactsService } from './contacts.service';
-import type { Contact } from './interfaces/contact.interface';
+import { ContactsService } from './contacts.service';
+import { Contact } from './interfaces/contact.interface';
 import { AuthGuard } from '../auth/auth.guard';
 import { User } from '../auth/user.decorator';
 

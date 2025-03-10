@@ -8,12 +8,10 @@ import { TasksModule } from './tasks/tasks.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({
-      isGlobal: true,
-    }),
+    ConfigModule.forRoot({ isGlobal: true }),
     ScheduleModule.forRoot(),
-    SupabaseModule,
-    ContactsModule,
+    SupabaseModule, 
+    ContactsModule, 
     MessagesModule,
     TasksModule,
   ],
