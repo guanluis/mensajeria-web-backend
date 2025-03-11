@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { SupabaseService } from '../supabase/supabase.service'; // 🔹 Importación corregida
-import type { Message } from './interfaces/message.interface';
-import type { CreateMessageDto } from './dto/create-message.dto';
+import { SupabaseService } from '../supabase/supabase.service';
+import { Message } from './interfaces/message.interface';
+import { CreateMessageDto } from './dto/create-message.dto';
 
 @Injectable()
 export class MessagesService {

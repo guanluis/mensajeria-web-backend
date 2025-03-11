@@ -1,8 +1,8 @@
 import { Body, Controller, Get, Param, Post, Query, UseGuards } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse, ApiQuery } from '@nestjs/swagger';
-import type { MessagesService } from './messages.service';
-import type { Message } from './interfaces/message.interface';
-import type { CreateMessageDto } from './dto/create-message.dto';
+import { MessagesService } from './messages.service';
+import { Message } from './interfaces/message.interface';
+import { CreateMessageDto } from './dto/create-message.dto';
 import { AuthGuard } from '../auth/auth.guard';
 import { User } from '../auth/user.decorator';
 
